@@ -16,22 +16,22 @@ const isIE = window.navigator.userAgent.indexOf("MSIE ") > -1 || window.navigato
  */
 export const b2cPolicies = {
     names: {
-        signUpSignIn: 'B2C_1_susi_v2',
+        signUpSignIn: 'B2C_1_SignInSignUp',
         resetPassword: 'B2C_1_reset_v3',
         editProfile: 'B2C_1_edit_profile_v2',
     },
     authorities: {
         signUpSignIn: {
-            authority: 'https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_susi_v2',
+            authority: 'https://bizzadminusa.b2clogin.com/bizzadminusa.onmicrosoft.com/B2C_1_SignInSignUp',
         },
         resetPassword: {
-            authority: 'https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/B2C_1_reset_v3',
+            authority: 'https://bizzadminusa.b2clogin.com/bizzadminusa.onmicrosoft.com/B2C_1_reset_v3',
         },
         editProfile: {
-            authority: 'https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_edit_profile_v2',
+            authority: 'https://bizzadminusa.b2clogin.com/bizzadminusa.onmicrosoft.com/b2c_1_edit_profile_v2',
         },
     },
-    authorityDomain: 'fabrikamb2c.b2clogin.com',
+    authorityDomain: 'bizzadminusa.b2clogin.com',
 };
 
 /**
@@ -41,7 +41,7 @@ export const b2cPolicies = {
  */
 export const msalConfig: Configuration = {
     auth: {
-        clientId: '9067c884-9fa6-414f-9aa4-a565b1cb46be', // This is the ONLY mandatory field that you need to supply.
+        clientId: '05cf28b1-7279-496d-909f-02c31acdd7a4', // This is the ONLY mandatory field that you need to supply.
         authority: b2cPolicies.authorities.signUpSignIn.authority, // Defaults to "https://login.microsoftonline.com/common"
         knownAuthorities: [b2cPolicies.authorityDomain], // Mark your B2C tenant's domain as trusted.
         redirectUri: '/auth', // Points to window.location.origin by default. You must register this URI on Azure portal/App Registration.
@@ -74,8 +74,8 @@ export const msalConfig: Configuration = {
   apiTodoList: {
       endpoint: "https://localhost:44351/api/todolist",
       scopes: {
-          read: ["https://fabrikamb2c.onmicrosoft.com/TodoList/ToDoList.Read"],
-          write: ["https://fabrikamb2c.onmicrosoft.com/TodoList/ToDoList.ReadWrite"]
+          read: ["https://bizzadminusa.onmicrosoft.com/981f519a-c2de-46a2-9842-f3fe9ed89be3/ToDoList.Read"],
+          write: ["https://bizzadminusa.onmicrosoft.com/981f519a-c2de-46a2-9842-f3fe9ed89be3/ToDoList.ReadWrite"]
       }
   }
 }

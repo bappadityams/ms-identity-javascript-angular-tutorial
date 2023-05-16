@@ -76,7 +76,7 @@ export function MSALInterceptorConfigFactory(): MsalInterceptorConfiguration {
  */
 export function MSALGuardConfigFactory(): MsalGuardConfiguration {
     return {
-        interactionType: InteractionType.Redirect,
+        interactionType: InteractionType.Popup,
         authRequest: loginRequest
     };
 }
